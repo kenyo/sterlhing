@@ -19,3 +19,18 @@ def plusMinus(arr):
 def staircase(n):
     for x in range(n):
         print(" " * (n-x-1) + "#" * (x+1))
+
+        
+def miniMaxSum(arr):
+    arr.sort()
+    mini_sum = 0 
+    max_sum = 0
+    
+    for i, x in enumerate(arr):
+        if i != 4:
+            mini_sum += x
+        if i != 0:
+            max_sum += x
+    
+    print(str(mini_sum) + " " + str(max_sum))
+    
