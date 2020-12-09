@@ -34,3 +34,14 @@ def miniMaxSum(arr):
     
     print(str(mini_sum) + " " + str(max_sum))
     
+def birthdayCakeCandles(candles):
+    candles.sort()
+    largest_candle = candles[candles_count - 1]
+    
+    large_count = 0
+    
+    for x in candles:
+        if x == largest_candle:
+            large_count += 1
+    
+    return(large_count)
