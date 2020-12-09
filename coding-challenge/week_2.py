@@ -45,3 +45,15 @@ def birthdayCakeCandles(candles):
             large_count += 1
     
     return(large_count)
+
+def timeConversion(s):
+    if(s[-2] == "A"):
+        if s[0:2] == "12":
+            return "00" + s[2:-2]
+        else:
+            return s[:-2]
+    else:
+        if s[0:2] == "12":
+            return s[:-2]
+        else:
+            return str(int(s[0:2]) + 12) + s[2:-2]
