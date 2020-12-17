@@ -45,4 +45,12 @@ if __name__ == '__main__':
     
     second_lowest_students.sort()
     for s in second_lowest_students:
-      print(s)    
+      print(s)
+    
+    
+if __name__ == '__main__':
+    n = int(input())
+    integer_list = map(int, input().split())
+    ints = list(integer_list)
+    t = tuple(ints)
+    print(hash(t))
