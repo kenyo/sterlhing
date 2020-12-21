@@ -54,7 +54,6 @@ if __name__ == '__main__':
     ints = list(integer_list)
     t = tuple(ints)
     print(hash(t))
-
     
 import operator
 
