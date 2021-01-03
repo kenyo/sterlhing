@@ -126,3 +126,13 @@ function meanGroups(a) {
 
   return Object.values(group)
 }
+
+
+
+function shuffleThePieces(arr, pieces) {
+    if (arr.length !== pieces.flat().length) return false
+
+    pieces.forEach(x => {
+
+    })
+}
