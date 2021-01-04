@@ -7,5 +7,4 @@ function rotLeft(a, d) {
   })
 
   return rotatedArray
-
 }
