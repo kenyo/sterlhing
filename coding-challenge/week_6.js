@@ -37,3 +37,22 @@ function maximumToys(prices, k) {
 
   return maxToyCount
 }
+
+
+const memo = {}
+
+function fibonacci(n) {
+  if (n <= 1) {
+    return n
+  } else if (memo[n] !== undefined) {
+    return memo[n]
+  } else {
+    const computedValue = fibonacci(n - 1) + fibonacci(n - 2)
+    memo[n] = computedValue
+
+    return computedValue
+  }
+
+
+
+}
