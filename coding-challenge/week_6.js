@@ -19,3 +19,21 @@ function countSwaps(a) {
     console.log('Last Element:', a[a.length - 1]);
 
 }
+
+
+function maximumToys(prices, k) {
+  const sortedPrices = prices.sort((x, y) => x - y)
+  let maxToyCount = 0
+
+  while (k > 0) {
+    let cheapestToy = sortedPrices.shift()
+
+    k -= cheapestToy
+
+    if (k > 0) {
+      maxToyCount++
+    }
+  }
+
+  return maxToyCount
+}
