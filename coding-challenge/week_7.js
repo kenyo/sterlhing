@@ -16,3 +16,12 @@ function persistence(num) {
 
   return counter
 }
+
+
+function findNextSquare(sq) {
+  var sqrt = Math.sqrt(sq)
+  if (sq % sqrt !== 0) return - 1
+  else {
+    return (sqrt + 1)**2
+  }
+}
