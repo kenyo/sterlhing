@@ -38,3 +38,17 @@ function findShort(s){
 
   return shortestWordLength
 }
+
+
+function tribonacci(signature,n){
+  if (n === 0) return []
+  if (n === 1) return [signature[0]]
+
+  const numbers = signature
+
+  for (let x = 2; x < n - 1; x++) {
+    numbers.push(numbers[x] + numbers[x - 1] + numbers[x - 2])
+  }
+
+  return numbers
+}
