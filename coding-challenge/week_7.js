@@ -25,3 +25,16 @@ function findNextSquare(sq) {
     return (sqrt + 1)**2
   }
 }
+
+
+
+function findShort(s){
+  const words = s.split(' ')
+
+  let shortestWordLength = 99
+  words.forEach(x => {
+    if (x.length < shortestWordLength) shortestWordLength = x.length
+  })
+
+  return shortestWordLength
+}
