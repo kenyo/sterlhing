@@ -49,3 +49,24 @@ function solution(input, markers) {
 
   return lines.map((x, i) => x.slice(0, cuts[i]) + '\n').join(' ').trim()
 };
+
+
+
+const _ = require('lodash')
+
+function anagrams(word, words) {
+  const wordObj = transform(word)
+
+  return words
+          .map(transform)
+          .map(x => _.isEqual(wordObj, x))
+          .map((x, i) => {
+            if (x) return words[i]
+          }).filter(x => x)
+}
+
+function transform(word) {
+  return word.split('').reduce((acc, cur) => {
+    acc[cur] = acc[cur] + 1 || 1
+    return acc
+  }, {})
