@@ -70,3 +70,17 @@ function transform(word) {
     acc[cur] = acc[cur] + 1 || 1
     return acc
   }, {})
+
+
+
+
+function generateHashtag (str) {
+  if (str.length === 0) return false
+
+  const words = str.split(' ').filter(x => x)
+
+  const output = `#` + words.map(x => x.charAt(0).toUpperCase() + x.slice(1)).join('')
+
+  if (output.length > 140 || output === '#') return false
+  else return output
+}
