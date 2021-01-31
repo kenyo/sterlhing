@@ -17,9 +17,10 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
 
-from boards import views
+from api import views
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
+    url('customer', views.crupdate_customer),
     path('admin/', admin.site.urls),
 ]
