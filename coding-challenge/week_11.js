@@ -31,4 +31,21 @@ var maxRedigit = function(num) {
 
 
 
+function onlyUnique(value, index, self) {
+  return self.indexOf(value) === index;
+}
+
+function longest(s1, s2) {
+  const string = s1 + (s2)
+
+  const letters = string.split('')
+
+  letters.sort()
+
+  return letters.filter(onlyUnique).join('')
+}
+
+
+
+
 
