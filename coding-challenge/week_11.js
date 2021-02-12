@@ -14,4 +14,21 @@ function maxSequence(arr){
 }
 
 
+var maxRedigit = function(num) {
+  if (num <= 0) {
+    return null
+  }
+
+  const digits = num.toString().split('')
+
+  digits.sort((a, b) => b - a)
+
+  const returnValue = parseInt(digits.join(''))
+
+  if (returnValue === num) return null
+  else return returnValue
+};
+
+
+
 
